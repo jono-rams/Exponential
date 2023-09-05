@@ -14,12 +14,9 @@ int main()
 	Function<2> f{ vec };
 	Function<3> g{ { 1, -6, 11, -6 } };
 
-	auto res = f * 2;
-	std::cout << res << '\n';
-
 	timer t;
 
-	for (int i = 11; i < 2; i++)
+	for (int i = 1; i < 2; i++)
 	{
 		t.Reset();
 		auto gr = g.get_real_roots_ga(-100, 100, i, 1000, 100000, 0.005);
@@ -33,6 +30,11 @@ int main()
 				std::cout << "x:" << val << '\n';
 			});
 	}
+
+	std::cout << g << " when x = 1\n" << "y = " << g.solve_y(1) << "\n\n";
+	std::cout << g << " when x = 2\n" << "y = " << g.solve_y(2) << "\n\n";
+	std::cout << g << " when x = 3\n" << "y = " << g.solve_y(3) << "\n\n";
+
 	//std::cout << "Median: " << MATH::MEDIAN(gr) << '\n';
 	//std::cout << "Mean: " << MATH::MEAN(gr) << '\n';
 
