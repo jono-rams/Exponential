@@ -152,6 +152,10 @@ namespace MATH
 			std::vector<int> constants;
 
 		public:
+			// Speicialty function to get the real roots of a Quadratic Function without relying on a Genetic Algorithm to approximate
+			friend std::vector<double> QuadraticSolve(const Function<2>& f);
+
+		public:
 			Function(const std::vector<int>& constnts);
 			Function(std::vector<int>&& constnts);
 			Function(const Function& other) = default;
@@ -160,9 +164,6 @@ namespace MATH
 
 			Function& operator=(const Function& other) = default;
 			Function& operator=(Function&& other) noexcept = default;
-
-			[[nodiscard("MATH::EXP::Function::differential() returns the differential, the calling object is not changed")]] 
-			Function<lrgst_exp - 1> differential() const; // This function returns the differential (dy/dx) of the Function object
 
 			// Operator function to display function object in a human readable format
 			friend std::ostream& operator<<(std::ostream& os, const Function<lrgst_exp> func)
@@ -210,9 +211,6 @@ namespace MATH
 				return os;
 			}
 
-			// Speicialty function to get the real roots of a Quadratic Function without relying on a Genetic Algorithm to approximate
-			friend std::vector<double> QuadraticSolve(const Function<2>& f);
-
 			template<int e1, int e2, int r>
 			friend Function<r> operator+(const Function<e1>& f1, const Function<e2>& f2); // Operator to add two functions
 			template<int e1, int e2, int r>
@@ -232,11 +230,17 @@ namespace MATH
 			}		
 			Function<lrgst_exp>& operator*=(const int& c)
 			{
+				if (c == 1) return *this;
+				if (c == 0) throw std::logic_error("Cannot multiply a function by 0");
+
 				for (auto& val : this->constants)
 					val *= c;
 
 				return *this;
 			}
+
+			[[nodiscard("MATH::EXP::Function::differential() returns the differential, the calling object is not changed")]]
+			Function<lrgst_exp - 1> differential() const; // This function returns the differential (dy/dx) of the Function object
 
 			// Function that uses a genetic algorithm to find the approximate roots of the function
 			[[nodiscard]] std::vector<double> get_real_roots_ga(
@@ -250,7 +254,97 @@ namespace MATH
 			// Function that returns the y-intercept of the function i.e. where x = 0
 			[[nodiscard]] inline Coordinate2D get_y_intrcpt() const noexcept { return Coordinate2D{ 0, (double)constants[lrgst_exp] }; }
 
+			[[nodiscard]] double solve_y(const double& x_val) const noexcept;
+
 		};
+
+		std::vector<double> QuadraticSolve(const Function<2>& f)
+		{
+			std::vector<double> res;
+
+			const int& a = f.constants[0];
+			const int& b = f.constants[1];
+			const int& c = f.constants[2];
+
+			const double sqr_val = static_cast<double>(POW(b, 2) - (4 * a * c));
+
+			if (sqr_val < 0)
+			{
+				return res;
+			}
+
+			res.push_back(	((NEGATE(b) + sqrt(sqr_val)) / 2 * a)	);
+			res.push_back(	((NEGATE(b) - sqrt(sqr_val)) / 2 * a)	);
+			return res;
+		}
+
+		template<int e1, int e2, int r = (e1 > e2 ? e1 : e2)>
+		Function<r> operator+(const Function<e1>& f1, const Function<e2>& f2)
+		{
+			std::vector<int> res;
+			if (e1 > e2)
+			{
+				for (auto& val : f1.constants)
+					res.push_back(val);
+
+				int i = e1 - e2;
+				for (auto& val : f2.constants)
+				{
+					res[i] += val;
+					i++;
+				}
+			}
+			else
+			{
+				for (auto& val : f2.constants)
+					res.push_back(val);
+
+				int i = e2 - e1;
+				for (auto& val : f1.constants)
+				{
+					res[i] += val;
+					i++;
+				}
+			}
+
+			return Function<r>{res};
+		}
+
+		template<int e1, int e2, int r = (e1 > e2 ? e1 : e2)>
+		Function<r> operator-(const Function<e1>& f1, const Function<e2>& f2)
+		{
+			std::vector<int> res;
+			if (e1 > e2)
+			{
+				for (auto& val : f1.constants)
+					res.push_back(val);
+
+				int i = e1 - e2;
+				for (auto& val : f2.constants)
+				{
+					res[i] -= val;
+					i++;
+				}
+			}
+			else
+			{
+				for (auto& val : f2.constants)
+					res.push_back(val);
+
+				int i = e2 - e1;
+
+				for (int j = 0; j < i; j++)
+					res[j] *= -1;
+
+				for (auto& val : f1.constants)
+				{
+					res[i] = val - res[i];
+					i++;
+				}
+			}
+
+			return Function<r>{res};
+		}
 
 		template <int lrgst_exp>
 		Function<lrgst_exp>::Function(const std::vector<int>& constnts)
@@ -381,95 +475,22 @@ namespace MATH
 			return ans;
 		}
 
-		std::vector<double> QuadraticSolve(const Function<2>& f)
+		template<int lrgst_exp>
+		double Function<lrgst_exp>::solve_y(const double& x_val) const noexcept
 		{
-			std::vector<double> res;
+			std::vector<bool> exceptions;
 
-			const int& a = f.constants[0];
-			const int& b = f.constants[1];
-			const int& c = f.constants[2];
+			for (int i : constants)
+				exceptions.push_back(i != 0);
 
-			const double sqr_val = static_cast<double>(POW(b, 2) - (4 * a * c));
-
-			if (sqr_val < 0)
+			double ans{ 0 };
+			for (int i = lrgst_exp; i >= 0; i--)
 			{
-				return res;
+				if (exceptions[i])
+					ans += constants[i] * POW(x_val, (lrgst_exp - i));
 			}
 
-			const double root1 = (NEGATE(b) + sqrt(sqr_val)) / 2 * a;
-			const double root2 = (NEGATE(b) - sqrt(sqr_val)) / 2 * a;
-
-			res.push_back(root1);
-			res.push_back(root2);
-			return res;
-		}
-
-		template<int e1, int e2, int r = (e1 > e2 ? e1 : e2)>
-		Function<r> operator+(const Function<e1>& f1, const Function<e2>& f2)
-		{
-			std::vector<int> res;
-			if (e1 > e2)
-			{
-				for (auto& val : f1.constants)
-					res.push_back(val);
-
-				int i = e1 - e2;
-				for (auto& val : f2.constants)
-				{
-					res[i] += val;
-					i++;
-				}
-			}
-			else
-			{
-				for (auto& val : f2.constants)
-					res.push_back(val);
-
-				int i = e2 - e1;
-				for (auto& val : f1.constants)
-				{
-					res[i] += val;
-					i++;
-				}
-			}
-
-			return Function<r>{res};
-		}
-
-		template<int e1, int e2, int r = (e1 > e2 ? e1 : e2)>
-		Function<r> operator-(const Function<e1>& f1, const Function<e2>& f2)
-		{
-			std::vector<int> res;
-			if (e1 > e2)
-			{
-				for (auto& val : f1.constants)
-					res.push_back(val);
-
-				int i = e1 - e2;
-				for (auto& val : f2.constants)
-				{
-					res[i] -= val;
-					i++;
-				}
-			}
-			else
-			{
-				for (auto& val : f2.constants)
-					res.push_back(val);
-
-				int i = e2 - e1;
-
-				for (int j = 0; j < i; j++)
-					res[j] *= -1;
-
-				for (auto& val : f1.constants)
-				{
-					res[i] = val - res[i];
-					i++;
-				}
-			}
-
-			return Function<r>{res};
+			return ans;
 		}
 	}
 }
