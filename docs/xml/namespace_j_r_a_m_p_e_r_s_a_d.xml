@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_j_r_a_m_p_e_r_s_a_d" kind="namespace" language="C++">
+    <compoundname>JRAMPERSAD</compoundname>
+    <innernamespace refid="namespace_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l">JRAMPERSAD::EXPONENTIAL</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Exponential/Exponential.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

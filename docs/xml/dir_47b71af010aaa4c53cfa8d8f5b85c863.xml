@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_47b71af010aaa4c53cfa8d8f5b85c863" kind="dir">
+    <compoundname>Exponential</compoundname>
+    <innerfile refid="_exponential_8h">Exponential.h</innerfile>
+    <innerfile refid="_source_8cpp">Source.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Exponential/"/>
+  </compounddef>
+</doxygen>

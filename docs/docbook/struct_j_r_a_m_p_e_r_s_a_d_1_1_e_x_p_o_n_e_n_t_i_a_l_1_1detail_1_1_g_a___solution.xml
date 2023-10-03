@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution" xml:lang="en-US">
+<title>JRAMPERSAD::EXPONENTIAL::detail::GA_Solution&lt; lrgst_expo &gt; Struct Template Reference</title>
+<indexterm><primary>JRAMPERSAD::EXPONENTIAL::detail::GA_Solution&lt; lrgst_expo &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution_1a6cf25d21664ed2bd25b37ce771450dc4"/><emphasis role="strong">GA_Solution</emphasis> (<link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">Rank</link>, <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">x_val</link>, <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">y</link>=0)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution_1ac92bb2a2e6a4d39f555b907db40f46b0"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">void</link> <emphasis role="strong">fitness</emphasis> (<link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">const</link> std::vector&lt; <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">int</link> &gt; &amp;constants)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution_1a2e3723b62d3f4bac9e4cc573fd64e84c"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <emphasis role="strong">rank</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution_1a7d57801b01fab757029663439f04af65"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <emphasis role="strong">x</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution_1a9d6a8fae4ccfaeb1ce20afecb67c84ff"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <emphasis role="strong">y_val</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail_1_1_g_a___solution_1adc3ef46c48fc4b5a202131921f5c2a5f"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">bool</link> <emphasis role="strong">ranked</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Exponential/Exponential.h</section>

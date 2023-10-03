@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kind="struct" language="C++" prot="public">
+    <compoundname>JRAMPERSAD::EXPONENTIAL::GA_Options</compoundname>
+    <includes refid="_exponential_8h" local="no">Exponential.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a316979973a2a6b70b00520c2f753a43c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref></type>
+        <definition>double JRAMPERSAD::EXPONENTIAL::GA_Options::min_range</definition>
+        <argsstring></argsstring>
+        <name>min_range</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::GA_Options::min_range</qualifiedname>
+        <initializer>= -100</initializer>
+        <briefdescription>
+<para>Minimum value you believe the answer can be. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="24" column="8" bodyfile="Exponential/Exponential.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a9b8f1e5367f6b0d8b16eecaea53b40e2" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref></type>
+        <definition>double JRAMPERSAD::EXPONENTIAL::GA_Options::max_range</definition>
+        <argsstring></argsstring>
+        <name>max_range</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::GA_Options::max_range</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+<para>Maximum value you believe the answer can be. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="26" column="8" bodyfile="Exponential/Exponential.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a4a67bad303f8a4fca40020a0802524c5" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">unsigned</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
+        <definition>unsigned int JRAMPERSAD::EXPONENTIAL::GA_Options::num_of_generations</definition>
+        <argsstring></argsstring>
+        <name>num_of_generations</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::GA_Options::num_of_generations</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+<para>Number of times you&apos;d like to run the algorithm (increasing this value causes the algorithm to take longer) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="28" column="14" bodyfile="Exponential/Exponential.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1ad133af29dbbc26b8c3d507d359c03326" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">unsigned</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
+        <definition>unsigned int JRAMPERSAD::EXPONENTIAL::GA_Options::sample_size</definition>
+        <argsstring></argsstring>
+        <name>sample_size</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::GA_Options::sample_size</qualifiedname>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+<para>Amount of approximate solutions you&apos;d like to be returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="30" column="14" bodyfile="Exponential/Exponential.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a6ec95fe6cc95dc32727659cf5bb1be12" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">unsigned</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
+        <definition>unsigned int JRAMPERSAD::EXPONENTIAL::GA_Options::data_size</definition>
+        <argsstring></argsstring>
+        <name>data_size</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::GA_Options::data_size</qualifiedname>
+        <initializer>= 100000</initializer>
+        <briefdescription>
+<para>Amount of solutions you&apos;d like the algorithm to generate (increasing this value causes the algorithm to take longer) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="32" column="14" bodyfile="Exponential/Exponential.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a736488b3cfeebda7b93b3e8c6f576bf8" prot="public" static="no" mutable="no">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref></type>
+        <definition>double JRAMPERSAD::EXPONENTIAL::GA_Options::mutation_percentage</definition>
+        <argsstring></argsstring>
+        <name>mutation_percentage</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::GA_Options::mutation_percentage</qualifiedname>
+        <initializer>= 0.01</initializer>
+        <briefdescription>
+<para>How much you&apos;d like the algorithm to mutate solutions (Leave this as default in most cases) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="34" column="8" bodyfile="Exponential/Exponential.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Structure for options to be used when running one of the two genetic algorithms in a <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Exponential/Exponential.h" line="21" column="1" bodyfile="Exponential/Exponential.h" bodystart="22" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a6ec95fe6cc95dc32727659cf5bb1be12" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::GA_Options</scope><name>data_size</name></member>
+      <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a9b8f1e5367f6b0d8b16eecaea53b40e2" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::GA_Options</scope><name>max_range</name></member>
+      <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a316979973a2a6b70b00520c2f753a43c" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::GA_Options</scope><name>min_range</name></member>
+      <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a736488b3cfeebda7b93b3e8c6f576bf8" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::GA_Options</scope><name>mutation_percentage</name></member>
+      <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a4a67bad303f8a4fca40020a0802524c5" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::GA_Options</scope><name>num_of_generations</name></member>
+      <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1ad133af29dbbc26b8c3d507d359c03326" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::GA_Options</scope><name>sample_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
