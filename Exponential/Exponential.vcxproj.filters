@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FunctionsTemplate.h">
+    <ClInclude Include="Exponential.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">

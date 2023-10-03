@@ -135,7 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="FunctionsTemplate.h" />
+    <ClInclude Include="Exponential.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
