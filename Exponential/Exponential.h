@@ -16,7 +16,6 @@ namespace JRAMPERSAD
 	{
 		/**
 		* \brief Structure for options to be used when running one of the two genetic algorithms in a Function object
-		*
 		*/
 		struct GA_Options
 		{
@@ -113,17 +112,17 @@ namespace JRAMPERSAD
 					});
 			}
 
-			template <int lrgst_expo> // Genetic Algorithm helper struct
+			// Genetic Algorithm helper struct
 			struct GA_Solution
 			{
+				unsigned short lrgst_expo;
 				double rank, x, y_val;
-				bool ranked;
 
-				GA_Solution() : rank(0), x(0), y_val(0), ranked(false) {}
-				GA_Solution(double Rank, double x_val, double y = 0) : rank(Rank), x(x_val), y_val(y), ranked(false) {}
+				GA_Solution() : lrgst_expo(0), rank(0), x(0), y_val(0) {}
+				GA_Solution(unsigned short Lrgst_expo, double Rank, double x_val, double y = 0) : lrgst_expo(Lrgst_expo), rank(Rank), x(x_val), y_val(y) {}
 				virtual ~GA_Solution() = default;
 
-				void fitness(const std::vector<int>& constants)
+				void fitness(const std::vector<int64_t>& constants)
 				{
 					double ans = 0;
 					for (int i = lrgst_expo; i >= 0; i--)
@@ -137,153 +136,118 @@ namespace JRAMPERSAD
 
 		using namespace detail;
 		/**
-		* \brief A class representing an Exponential Function (e.g 2x^2 + 4x - 1),
-		* \tparam lrgst_expo The largest exponent in the function (e.g 2 means largest exponent is x^2)
+		* \brief class representing an Exponential Function (e.g 2x^2 + 4x - 1)
 		*/
-		template <int lrgst_expo>
 		class Function
 		{
 		private:
-			std::vector<int> constants;
+			const unsigned short lrgst_expo; /**< lrgst_expo The largest exponent in the function (e.g 2 means largest exponent is x^2) */
+			std::vector<int64_t> constants;
+
+			bool bInitialized;
+
+			void CanPerform() const { if (!bInitialized) throw std::logic_error("Function object not initialized fully! Please call .SetConstants() to initialize"); }
 
 		public:
 			// Speicialty function to get the real roots of a Quadratic Function without relying on a Genetic Algorithm to approximate
-			friend std::vector<double> QuadraticSolve(const Function<2>& f);
+			friend std::vector<double> QuadraticSolve(const Function& f);
 
 		public:
 			/**
 			* \brief Constructor for Function class
-			* \param constnts An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1
+			* \param Lrgst_expo The largest exponent in the function (e.g 2 means largest exponent is x^2)
 			*/
-			Function(const std::vector<int>& constnts);
-			/**
-			* \brief Constructor for Function class
-			* \param constnts An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1
-			*/
-			Function(std::vector<int>&& constnts);
-			Function(const Function& other) = default;
-			Function(Function&& other) noexcept = default;
+			Function(const unsigned short& Lrgst_expo) : lrgst_expo(Lrgst_expo), bInitialized(false)
+			{
+				if (lrgst_expo < 0)
+					throw std::logic_error("Function template argument must not be less than 0"); 
+				constants.reserve(Lrgst_expo); 
+			}
+			/** \brief Destructor */
 			virtual ~Function();
-
+			/** \brief Copy Constructor */
+			Function(const Function& other) = default;
+			/** \brief Move Constructor */
+			Function(Function&& other) noexcept = default;
+			/** \brief Copy Assignment operator */
 			Function& operator=(const Function& other) = default;
+			/** \brief Move Assignment operator */
 			Function& operator=(Function&& other) noexcept = default;
 
-			// Operator function to display function object in a human readable format
-			friend std::ostream& operator<<(std::ostream& os, const Function<lrgst_expo> func)
-			{
-				if (lrgst_expo == 0)
-				{
-					os << func.constants[0];
-					return os;
-				}
+			/**
+			* \brief Sets the constants of the function
+			* \param constnts An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1
+			*/
+			void SetConstants(const std::vector<int64_t>& constnts);
+			/**
+			* \brief Sets the constants of the function
+			* \param constnts An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1
+			*/
+			void SetConstants(std::vector<int64_t>&& constnts);
 
-				if (func.constants[0] == 1)
-					os << "x";
-				else if (func.constants[0] == -1)
-					os << "-x";
-				else
-					os << func.constants[0] << "x";
+			friend std::ostream& operator<<(std::ostream& os, const Function func);
+		
+			friend Function operator+(const Function& f1, const Function& f2);
+			friend Function operator-(const Function& f1, const Function& f2);
 
-				if (lrgst_expo != 1)
-					os << "^" << lrgst_expo;
-
-				for (int i = lrgst_expo - 1; i > 0; i--)
-				{
-					int n = func.constants[lrgst_expo - i];
-					if (n == 0) continue;
-
-					auto s = n > 0 ? " + " : " - ";
-
-					if (n != 1)
-						os << s << ABS(n) << "x";
-					else
-						os << s << "x";
-
-					if (i != 1)
-						os << "^" << i;
-				}
-
-				int n = func.constants[lrgst_expo];
-				if (n == 0) return os;
-
-				auto s = n > 0 ? " + " : " - ";
-				os << s;
-
-				os << ABS(n);
-
-				return os;
-			}
-
-			template<int e1, int e2, int r>
-			friend Function<r> operator+(const Function<e1>& f1, const Function<e2>& f2); // Operator to add two functions
-			template<int e1, int e2, int r>
-			friend Function<r> operator-(const Function<e1>& f1, const Function<e2>& f2); // Operator to subtract two functions
-
-			// Operators to multiply a function by a constant (Scaling it)
-			friend Function<lrgst_expo> operator*(const Function<lrgst_expo>& f, const int& c)
-			{
-				if (c == 1) return f;
-				if (c == 0) throw std::logic_error("Cannot multiply a function by 0");
-
-				std::vector<int> res;
-				for (auto& val : f.constants)
-					res.push_back(c * val);
-
-				return Function<lrgst_expo>(res);
-			}
-			Function<lrgst_expo>& operator*=(const int& c)
-			{
-				if (c == 1) return *this;
-				if (c == 0) throw std::logic_error("Cannot multiply a function by 0");
-
-				for (auto& val : this->constants)
-					val *= c;
-
-				return *this;
-			}
+			friend Function operator*(const Function& f, const int64_t& c);
+			Function& operator*=(const int64_t& c);
 
 			/**
-			* \brief Calculates the differential (dy/dx) of the function
-			* \returns a function representing the differential (dy/dx) of the calling function object
+			* \brief Calculates the differential (dy/dx) of the Function
+			* \returns a Function representing the differential (dy/dx) of the calling function object
 			*/
 			[[nodiscard("MATH::EXP::Function::differential() returns the differential, the calling object is not changed")]]
-			Function<lrgst_expo - 1> differential() const;
+			Function differential() const;
 
 			/**
-			* \brief Function that uses a genetic algorithm to find the approximate roots of the function
+			* \brief Uses a genetic algorithm to find the approximate roots of the function
 			* \param options GA_Options object specifying the options to run the algorithm
 			* \returns A vector containing a n number of approximate root values (n = sample_size as defined in options)
 			*/
 			[[nodiscard]] std::vector<double> get_real_roots(const GA_Options& options = GA_Options()) const;
 
 			/**
-			* \brief Function that solves for y when x = user value
+			* \brief Solves for y when x = user value
 			* \param x_val the X Value you'd like the function to use
 			* \returns the Y value the function returns based on the entered X value
 			*/
-			[[nodiscard]] double solve_y(const double& x_val) const noexcept;
+			[[nodiscard]] double solve_y(const double& x_val) const;
 
 			/**
-			* \brief Function that uses a genetic algorithm to find the values of x where y = user value
+			* \brief Uses a genetic algorithm to find the values of x where y = user value
 			* \param y_val The return value that you would like to find the approximate x values needed to solve when entered into the function
 			* \param options GA_Options object specifying the options to run the algorithm
 			* \returns A vector containing a n number of x values that cause the function to approximately equal the y_val (n = sample_size as defined in options)
 			*/
 			[[nodiscard]] std::vector<double> solve_x(const double& y_val, const GA_Options& options = GA_Options()) const;
+
+			/** \returns lrgst_expo */
+			[[nodiscard]] auto GetWhatIsTheLargestExponent() const { return lrgst_expo; }
 		};
 
 		/**
 		* \brief Uses the quadratic function to solve the roots of an entered quadratic equation
-		* \param f Quadratic function you'd like to find the roots of (Quadratic Function object is a Function<2> object
+		* \param f Quadratic function you'd like to find the roots of (Quadratic Function object is a Function object who's lrgst_expo value = 2
 		* \returns a vector containing the roots
 		*/
-		std::vector<double> QuadraticSolve(const Function<2>& f)
+		std::vector<double> QuadraticSolve(const Function& f)
 		{
+			try
+			{
+				if (f.lrgst_expo != 2) throw std::logic_error("Function f is not a quadratic function");
+				f.CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
+
 			std::vector<double> res;
 
-			const int& a = f.constants[0];
-			const int& b = f.constants[1];
-			const int& c = f.constants[2];
+			const auto& a = f.constants[0];
+			const auto& b = f.constants[1];
+			const auto& c = f.constants[2];
 
 			const double sqr_val = static_cast<double>(POW(b, 2) - (4 * a * c));
 
@@ -296,17 +260,115 @@ namespace JRAMPERSAD
 			res.push_back(((NEGATE(b) - sqrt(sqr_val)) / 2 * a));
 			return res;
 		}
-
-		template<int e1, int e2, int r = (e1 > e2 ? e1 : e2)>
-			Function<r> operator+(const Function<e1>& f1, const Function<e2>& f2)
+	
+		Function::~Function()
 		{
-			std::vector<int> res;
+			constants.clear();
+		}
+
+		void Function::SetConstants(const std::vector<int64_t>& constnts)
+		{
+			if (constnts.size() != lrgst_expo + 1)
+				throw std::logic_error("Function<n> must be created with (n+1) integers in vector object");
+
+			if (constnts[0] == 0)
+				throw std::logic_error("First value should not be 0");
+
+			constants = constnts;
+			bInitialized = true;
+		}
+
+		void Function::SetConstants(std::vector<int64_t>&& constnts)
+		{
+			if (constnts.size() != lrgst_expo + 1)
+				throw std::logic_error("Function<n> must be created with (n+1) integers in vector object");
+
+			if (constnts[0] == 0)
+				throw std::logic_error("First value should not be 0");
+
+			constants = std::move(constnts);
+			bInitialized = true;
+		}
+
+		/** Operator function to display function object in a human readable format */
+		std::ostream& operator<<(std::ostream& os, const Function func)
+		{
+			try
+			{
+				func.CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
+
+			if (func.lrgst_expo == 0)
+			{
+				os << func.constants[0];
+				return os;
+			}
+
+			if (func.constants[0] == 1)
+				os << "x";
+			else if (func.constants[0] == -1)
+				os << "-x";
+			else
+				os << func.constants[0] << "x";
+
+			if (func.lrgst_expo != 1)
+				os << "^" << func.lrgst_expo;
+
+			for (auto i = func.lrgst_expo - 1; i > 0; i--)
+			{
+				auto n = func.constants[func.lrgst_expo - i];
+				if (n == 0) continue;
+
+				auto s = n > 0 ? " + " : " - ";
+
+				if (n != 1)
+					os << s << ABS(n) << "x";
+				else
+					os << s << "x";
+
+				if (i != 1)
+					os << "^" << i;
+			}
+
+			auto n = func.constants[func.lrgst_expo];
+			if (n == 0) return os;
+
+			auto s = n > 0 ? " + " : " - ";
+			os << s;
+
+			os << ABS(n);
+
+			return os;
+		}
+
+		/** Operator to add two functions */
+		Function operator+(const Function& f1, const Function& f2)
+		{
+			try
+			{
+				f1.CanPerform();
+				f2.CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
+
+			auto e1 = f1.lrgst_expo;
+			auto e2 = f2.lrgst_expo;
+			auto r = e1 > e2 ? e1 : e2;
+
+			std::vector<int64_t> res;
 			if (e1 > e2)
 			{
 				for (auto& val : f1.constants)
 					res.push_back(val);
 
-				int i = e1 - e2;
+				auto i = e1 - e2;
 				for (auto& val : f2.constants)
 				{
 					res[i] += val;
@@ -326,19 +388,35 @@ namespace JRAMPERSAD
 				}
 			}
 
-			return Function<r>{res};
+			Function f(r);
+			f.SetConstants(res);
+			return f;
 		}
-
-		template<int e1, int e2, int r = (e1 > e2 ? e1 : e2)>
-			Function<r> operator-(const Function<e1>& f1, const Function<e2>& f2)
+	
+		/** Operator to subtract two functions */
+		Function operator-(const Function& f1, const Function& f2)
 		{
-			std::vector<int> res;
+			try
+			{
+				f1.CanPerform();
+				f2.CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
+
+			auto e1 = f1.lrgst_expo;
+			auto e2 = f2.lrgst_expo;
+			auto r = e1 > e2 ? e1 : e2;
+
+			std::vector<int64_t> res;
 			if (e1 > e2)
 			{
 				for (auto& val : f1.constants)
 					res.push_back(val);
 
-				int i = e1 - e2;
+				auto i = e1 - e2;
 				for (auto& val : f2.constants)
 				{
 					res[i] -= val;
@@ -362,78 +440,109 @@ namespace JRAMPERSAD
 				}
 			}
 
-			return Function<r>{res};
+			Function f(r);
+			f.SetConstants(res);
+			return f;
 		}
 
-		template <int lrgst_expo>
-		Function<lrgst_expo>::Function(const std::vector<int>& constnts)
+		/** Operator to multiply a function by a constant (Scaling it) */
+		Function operator*(const Function& f, const int64_t& c)
 		{
-			if (lrgst_expo < 0)
-				throw std::logic_error("Function template argument must not be less than 0");
+			try
+			{
+				f.CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
 
-			if (constnts.size() != lrgst_expo + 1)
-				throw std::logic_error("Function<n> must be created with (n+1) integers in vector object");
+			if (c == 1) return f;
+			if (c == 0) throw std::logic_error("Cannot multiply a function by 0");
 
-			if (constnts[0] == 0)
-				throw std::logic_error("First value should not be 0");
+			std::vector<int64_t> res;
+			for (auto& val : f.constants)
+				res.push_back(c * val);
 
-			constants = constnts;
+			Function f_res(f.lrgst_expo);
+			f_res.SetConstants(res);
+
+			return f_res;
 		}
 
-		template<int lrgst_expo>
-		Function<lrgst_expo>::Function(std::vector<int>&& constnts)
+		/** Operator to multiply a function by a constant (Scaling it) */
+		Function& Function::operator*=(const int64_t& c)
 		{
-			if (lrgst_expo < 0)
-				throw std::logic_error("Function template argument must not be less than 0");
+			try
+			{
+				this->CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
 
-			if (constnts.size() != lrgst_expo + 1)
-				throw std::logic_error("Function<n> must be created with (n+1) integers in vector object");
+			if (c == 1) return *this;
+			if (c == 0) throw std::logic_error("Cannot multiply a function by 0");
 
-			if (constnts[0] == 0)
-				throw std::logic_error("First value should not be 0");
+			for (auto& val : this->constants)
+				val *= c;
 
-			constants = std::move(constnts);
+			return *this;
 		}
-
-		template <int lrgst_expo>
-		Function<lrgst_expo>::~Function()
+		
+		Function Function::differential() const
 		{
-			constants.clear();
-		}
+			try
+			{
+				this->CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
 
-		template <int lrgst_expo>
-		Function<lrgst_expo - 1> Function<lrgst_expo>::differential() const
-		{
 			if (lrgst_expo == 0)
 				throw std::logic_error("Cannot differentiate a number (Function<0>)");
 
-			std::vector<int> result;
+			std::vector<int64_t> result;
 			for (int i = 0; i < lrgst_expo; i++)
 			{
 				result.push_back(constants[i] * (lrgst_expo - i));
 			}
 
-			return Function<lrgst_expo - 1>{result};
+			Function f{ (unsigned short)(lrgst_expo - 1) };
+			f.SetConstants(result);
+
+			return f;
 		}
 
-		template<int lrgst_expo>
-		std::vector<double> Function<lrgst_expo>::get_real_roots(const GA_Options& options) const
+		std::vector<double> Function::get_real_roots(const GA_Options& options) const
 		{
+			try
+			{
+				this->CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
+
 			// Create initial random solutions
 			std::random_device device;
 			std::uniform_real_distribution<double> unif(options.min_range, options.max_range);
-			std::vector<GA_Solution<lrgst_expo>> solutions;
+			std::vector<GA_Solution> solutions;
 
 			solutions.resize(options.data_size);
 			for (unsigned int i = 0; i < options.sample_size; i++)
-				solutions[i] = (GA_Solution<lrgst_expo>{0, unif(device)});
+				solutions[i] = (GA_Solution{lrgst_expo, 0, unif(device)});
 
 			float timer{ 0 };
 
 			for (unsigned int count = 0; count < options.num_of_generations; count++)
 			{
-				std::generate(std::execution::par, solutions.begin() + options.sample_size, solutions.end(), [&unif, &device]() {
-					return GA_Solution<lrgst_expo>{0, unif(device)};
+				std::generate(std::execution::par, solutions.begin() + options.sample_size, solutions.end(), [this, &unif, &device]() {
+					return GA_Solution{lrgst_expo, 0, unif(device)};
 					});
 
 				// Run our fitness function
@@ -446,7 +555,7 @@ namespace JRAMPERSAD
 					});
 
 				// Take top solutions
-				std::vector<GA_Solution<lrgst_expo>> sample;
+				std::vector<GA_Solution> sample;
 				std::copy(
 					solutions.begin(),
 					solutions.begin() + options.sample_size,
@@ -495,40 +604,49 @@ namespace JRAMPERSAD
 			return ans;
 		}
 
-		template<int lrgst_expo>
-		double Function<lrgst_expo>::solve_y(const double& x_val) const noexcept
+		double Function::solve_y(const double& x_val) const
 		{
-			std::vector<bool> exceptions;
-
-			for (int i : constants)
-				exceptions.push_back(i != 0);
+			try
+			{
+				this->CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
 
 			double ans{ 0 };
 			for (int i = lrgst_expo; i >= 0; i--)
 			{
-				if (exceptions[i])
-					ans += constants[i] * POW(x_val, (lrgst_expo - i));
+				ans += constants[i] * POW(x_val, (lrgst_expo - i));
 			}
-
 			return ans;
 		}
 
-		template<int lrgst_expo>
-		inline std::vector<double> Function<lrgst_expo>::solve_x(const double& y_val, const GA_Options& options) const
+		inline std::vector<double> Function::solve_x(const double& y_val, const GA_Options& options) const
 		{
+			try
+			{
+				this->CanPerform();
+			}
+			catch (const std::exception& e)
+			{
+				throw e;
+			}
+
 			// Create initial random solutions
 			std::random_device device;
 			std::uniform_real_distribution<double> unif(options.min_range, options.max_range);
-			std::vector<GA_Solution<lrgst_expo>> solutions;
+			std::vector<GA_Solution> solutions;
 
 			solutions.resize(options.data_size);
 			for (unsigned int i = 0; i < options.sample_size; i++)
-				solutions[i] = (GA_Solution<lrgst_expo>{0, unif(device), y_val});
+				solutions[i] = (GA_Solution{lrgst_expo, 0, unif(device), y_val});
 
 			for (unsigned int count = 0; count < options.num_of_generations; count++)
 			{
-				std::generate(std::execution::par, solutions.begin() + options.sample_size, solutions.end(), [&unif, &device, &y_val]() {
-					return GA_Solution<lrgst_expo>{0, unif(device), y_val};
+				std::generate(std::execution::par, solutions.begin() + options.sample_size, solutions.end(), [this, &unif, &device, &y_val]() {
+					return GA_Solution{lrgst_expo, 0, unif(device), y_val};
 					});
 
 
@@ -542,7 +660,7 @@ namespace JRAMPERSAD
 					});
 
 				// Take top solutions
-				std::vector<GA_Solution<lrgst_expo>> sample;
+				std::vector<GA_Solution> sample;
 				std::copy(
 					solutions.begin(),
 					solutions.begin() + options.sample_size,
@@ -592,5 +710,8 @@ namespace JRAMPERSAD
 		}
 	}
 }
+
+#define INITIALIZE_EXPO_FUNCTION(func, ...) \
+func.SetConstants(__VA_ARGS__)
 
 #endif // !JONATHAN_RAMPERSAD_EXPONENTIAL_H_

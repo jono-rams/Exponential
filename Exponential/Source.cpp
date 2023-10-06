@@ -7,13 +7,11 @@
 
 using namespace JRAMPERSAD;
 
-template <int n>
-using Function = EXPONENTIAL::Function<n>;
+using EXPONENTIAL::Function;
 
 typedef TIMER::Timer timer;
 
-template<int exp>
-void CalcRoots(std::mutex& m, const Function<exp>& func, EXPONENTIAL::GA_Options options)
+void CalcRoots(std::mutex& m, const Function& func, EXPONENTIAL::GA_Options options)
 {
 	m.lock();
 	std::cout << "Starting calculation...\n";
@@ -33,8 +31,7 @@ void CalcRoots(std::mutex& m, const Function<exp>& func, EXPONENTIAL::GA_Options
 	m.unlock();
 }
 
-template<int exp>
-void SolveX(std::mutex& m, const Function<exp>& func, EXPONENTIAL::GA_Options options, const double& y)
+void SolveX(std::mutex& m, const Function& func, EXPONENTIAL::GA_Options options, const double& y)
 {
 	timer t;
 	auto res = func.solve_x(y, options);
@@ -52,27 +49,37 @@ void SolveX(std::mutex& m, const Function<exp>& func, EXPONENTIAL::GA_Options op
 
 int main()
 {
-	std::vector<int> vec{ 1, 5, 4 };
-	Function<2> f{ vec };
-	Function<3> g{ { 1, -6, 11, -6 } };
+	std::vector<int64_t> vec{ 1, 5, 4 };
+	Function f{2};
+	INITIALIZE_EXPO_FUNCTION(f, vec);
+	Function g{3};
+	INITIALIZE_EXPO_FUNCTION(g, { 1, -6, 11, -6 });
 
 	EXPONENTIAL::GA_Options options;
 	options.mutation_percentage = 0.005;
-	options.num_of_generations = 10;
-	options.sample_size = 1000;
-	options.data_size = 100000;
-	options.min_range = 4.9;
-	options.max_range = 5;
+	options.num_of_generations = 1;
+	options.sample_size = 1;
+	options.data_size = 2;
+	options.min_range = 0.13;
+	options.max_range = 0.14;
+
+	auto res = (f + g).get_real_roots(options);
+	std::for_each(res.begin(), res.end(),
+		[](const auto& val) {
+			std::cout << "x:" << val << '\n';
+		});
+
+	std::cout << (f + g) << " when x = 0.13056\n" << (f + g).solve_y(0.13056);
 
 	std::mutex m;
-	std::thread th(CalcRoots<3>, std::ref(m), std::cref(g), options);
-	//std::thread th1(SolveX<3>, std::ref(m), std::cref(g), options, 5);
-	//std::thread th2(SolveX<3>, std::ref(m), std::cref(g), options, 23);
+	//std::thread th(CalcRoots, std::ref(m), std::cref(g), options);
+	//std::thread th1(SolveX, std::ref(m), std::cref(g), options, 5);
+	//std::thread th2(SolveX, std::ref(m), std::cref(g), options, 23);
 
-	//CalcRoots<3>(m, g);
+	//CalcRoots(m, g);
 
 	m.lock();
-	std::cout << g << " when x = 4.961015\n" << "y = " << g.solve_y(4.961015) << "\n\n";
+	//std::cout << g << " when x = 4.961015\n" << "y = " << g.solve_y(4.961015) << "\n\n";
 	//std::cout << g << " when x = 4.30891\n" << "y = " << g.solve_y(4.30891) << "\n\n";
 	//std::cout << g << " when x = 2\n" << "y = " << g.solve_y(2) << "\n\n";
 	//std::cout << g << " when x = 3\n" << "y = " << g.solve_y(3) << "\n\n";
@@ -82,10 +89,13 @@ int main()
 
 	//std::cout << "Calculating Roots for function f(x) = " << g << '\n';
 	//std::cout << "The y-intercept of the function f(x) is " << g.solve_y(0) << '\n';
-	std::cout << "dy/dx of f(x) is " << g.differential() << '\n';
+	//std::cout << "dy/dx of f(x) is " << g.differential() << '\n';
+	//std::cout << "f(x) = " << f << std::endl;
+	//std::cout << "g(x) = " << g << std::endl;
+	//std::cout << "f(x) + g(x) = " << f + g << std::endl;
 	m.unlock();
 
-	th.join();
+	//th.join();
 	//th1.join();
 	//th2.join();
 	return 0;
