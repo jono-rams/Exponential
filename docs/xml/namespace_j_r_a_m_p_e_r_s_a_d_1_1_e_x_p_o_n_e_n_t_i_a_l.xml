@@ -6,14 +6,14 @@
     <innerclass refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" prot="public">JRAMPERSAD::EXPONENTIAL::GA_Options</innerclass>
     <innernamespace refid="namespace_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail">JRAMPERSAD::EXPONENTIAL::detail</innernamespace>
     <sectiondef kind="func">
-      <memberdef kind="function" id="_exponential_8h_1a74ba0c80c30d2b4a2746dcafafbb6331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref> &gt;</type>
+      <memberdef kind="function" id="_exponential_8h_1afbf8f9d0d82d0a543ba3f13fe888b3f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
         <definition>std::vector&lt; double &gt; JRAMPERSAD::EXPONENTIAL::QuadraticSolve</definition>
-        <argsstring>(const Function&lt; 2 &gt; &amp;f)</argsstring>
+        <argsstring>(const Function &amp;f)</argsstring>
         <name>QuadraticSolve</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::QuadraticSolve</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; 2 &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f</declname>
         </param>
         <briefdescription>
@@ -25,7 +25,7 @@
 <parametername>f</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Quadratic function you&apos;d like to find the roots of (Quadratic <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object is a Function&lt;2&gt; object </para>
+<para>Quadratic function you&apos;d like to find the roots of (Quadratic <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object is a <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object who&apos;s lrgst_expo value = 2 </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -35,87 +35,99 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="280" column="13" bodyfile="Exponential/Exponential.h" bodystart="280" bodyend="298"/>
+        <location file="Exponential/Exponential.h" line="234" column="13" bodyfile="Exponential/Exponential.h" bodystart="234" bodyend="262"/>
       </memberdef>
-      <memberdef kind="function" id="_exponential_8h_1a949e2b83422e0ba69d947c8ae8b6b33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>int</type>
-            <declname>e1</declname>
-            <defname>e1</defname>
-          </param>
-          <param>
-            <type>int</type>
-            <declname>e2</declname>
-            <defname>e2</defname>
-          </param>
-          <param>
-            <type>int</type>
-            <declname>r</declname>
-            <defname>r</defname>
-            <defval>(e1 &gt; e2 ? e1 : e2)</defval>
-          </param>
-        </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">r</ref> &gt;</type>
-        <definition>Function&lt; r &gt; JRAMPERSAD::EXPONENTIAL::operator+</definition>
-        <argsstring>(const Function&lt; e1 &gt; &amp;f1, const Function&lt; e2 &gt; &amp;f2)</argsstring>
+      <memberdef kind="function" id="_exponential_8h_1acc43d98b40363eca4193d6a37120db7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; JRAMPERSAD::EXPONENTIAL::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Function func)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator function to display function object in a human readable format </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="294" column="1" bodyfile="Exponential/Exponential.h" bodystart="294" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="_exponential_8h_1aa6d1335b2f46ca5c209acbfbc72c6108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function JRAMPERSAD::EXPONENTIAL::operator+</definition>
+        <argsstring>(const Function &amp;f1, const Function &amp;f2)</argsstring>
         <name>operator+</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::operator+</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e1</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f1</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e2</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f2</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator to add two functions </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="301" column="10" bodyfile="Exponential/Exponential.h" bodystart="301" bodyend="330"/>
+        <location file="Exponential/Exponential.h" line="349" column="10" bodyfile="Exponential/Exponential.h" bodystart="349" bodyend="394"/>
       </memberdef>
-      <memberdef kind="function" id="_exponential_8h_1a9c05c4f210dac69008764b974749d9d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>int</type>
-            <declname>e1</declname>
-            <defname>e1</defname>
-          </param>
-          <param>
-            <type>int</type>
-            <declname>e2</declname>
-            <defname>e2</defname>
-          </param>
-          <param>
-            <type>int</type>
-            <declname>r</declname>
-            <defname>r</defname>
-            <defval>(e1 &gt; e2 ? e1 : e2)</defval>
-          </param>
-        </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">r</ref> &gt;</type>
-        <definition>Function&lt; r &gt; JRAMPERSAD::EXPONENTIAL::operator-</definition>
-        <argsstring>(const Function&lt; e1 &gt; &amp;f1, const Function&lt; e2 &gt; &amp;f2)</argsstring>
+      <memberdef kind="function" id="_exponential_8h_1afd853cdd6fe62dbc9ae6010a32d506ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function JRAMPERSAD::EXPONENTIAL::operator-</definition>
+        <argsstring>(const Function &amp;f1, const Function &amp;f2)</argsstring>
         <name>operator-</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::operator-</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e1</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f1</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e2</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f2</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator to subtract two functions </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="333" column="10" bodyfile="Exponential/Exponential.h" bodystart="333" bodyend="366"/>
+        <location file="Exponential/Exponential.h" line="397" column="10" bodyfile="Exponential/Exponential.h" bodystart="397" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="_exponential_8h_1a5d967a0e13882cc4f945cba48582eaea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function JRAMPERSAD::EXPONENTIAL::operator*</definition>
+        <argsstring>(const Function &amp;f, const int64_t &amp;c)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const int64_t &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator to multiply a function by a constant (Scaling it) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="449" column="10" bodyfile="Exponential/Exponential.h" bodystart="449" bodyend="471"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

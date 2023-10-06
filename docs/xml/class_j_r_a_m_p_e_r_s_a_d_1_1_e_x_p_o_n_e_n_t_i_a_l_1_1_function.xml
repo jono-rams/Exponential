@@ -3,17 +3,25 @@
   <compounddef id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kind="class" language="C++" prot="public">
     <compoundname>JRAMPERSAD::EXPONENTIAL::Function</compoundname>
     <includes refid="_exponential_8h" local="no">Exponential.h</includes>
-    <templateparamlist>
-      <param>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-        <declname>lrgst_expo</declname>
-        <defname>lrgst_expo</defname>
-      </param>
-    </templateparamlist>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a77a9d035d39b19c73c1c58d76aaa7820" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref> &gt;</type>
-        <definition>std::vector&lt;int&gt; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::constants</definition>
+      <memberdef kind="variable" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a1918ec5f094574f4a43f51e3d4fd5016" prot="private" static="no" mutable="no">
+        <type>const unsigned short</type>
+        <definition>const unsigned short JRAMPERSAD::EXPONENTIAL::Function::lrgst_expo</definition>
+        <argsstring></argsstring>
+        <name>lrgst_expo</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::lrgst_expo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lrgst_expo The largest exponent in the function (e.g 2 means largest exponent is x^2) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="144" column="22" bodyfile="Exponential/Exponential.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8539119d87e133fc25fdd7c90c081e3e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int64_t &gt;</type>
+        <definition>std::vector&lt;int64_t&gt; JRAMPERSAD::EXPONENTIAL::Function::constants</definition>
         <argsstring></argsstring>
         <name>constants</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::constants</qualifiedname>
@@ -23,18 +31,48 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="147" column="13" bodyfile="Exponential/Exponential.h" bodystart="147" bodyend="-1"/>
+        <location file="Exponential/Exponential.h" line="145" column="13" bodyfile="Exponential/Exponential.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae2fc8499e47324a7ca65c20996119f1b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JRAMPERSAD::EXPONENTIAL::Function::bInitialized</definition>
+        <argsstring></argsstring>
+        <name>bInitialized</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::bInitialized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="147" column="6" bodyfile="Exponential/Exponential.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ab64518ac4650ef1a33ed80b285b0e7fc" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void JRAMPERSAD::EXPONENTIAL::Function::CanPerform</definition>
+        <argsstring>() const</argsstring>
+        <name>CanPerform</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::CanPerform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="149" column="6" bodyfile="Exponential/Exponential.h" bodystart="149" bodyend="149"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
-      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8f5b8975b6e7318c093a963cd0b43db6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref> &gt;</type>
+      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a9d14c1b8a7401565a054837df5708ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
         <definition>std::vector&lt; double &gt; QuadraticSolve</definition>
-        <argsstring>(const Function&lt; 2 &gt; &amp;f)</argsstring>
+        <argsstring>(const Function &amp;f)</argsstring>
         <name>QuadraticSolve</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::QuadraticSolve</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; 2 &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f</declname>
         </param>
         <briefdescription>
@@ -46,7 +84,7 @@
 <parametername>f</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Quadratic function you&apos;d like to find the roots of (Quadratic <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object is a Function&lt;2&gt; object </para>
+<para>Quadratic function you&apos;d like to find the roots of (Quadratic <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object is a <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> object who&apos;s lrgst_expo value = 2 </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -56,12 +94,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="151" column="20" bodyfile="Exponential/Exponential.h" bodystart="280" bodyend="298"/>
+        <location file="Exponential/Exponential.h" line="153" column="20" bodyfile="Exponential/Exponential.h" bodystart="234" bodyend="262"/>
       </memberdef>
-      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5de27194ad9a38f44771637a0f187562" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a9715ead4f7565aea73b2b956d32a8c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::ostream &amp;</type>
         <definition>std::ostream &amp; operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;os, const Function&lt; lrgst_expo &gt; func)</argsstring>
+        <argsstring>(std::ostream &amp;os, const Function func)</argsstring>
         <name>operator&lt;&lt;</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator&lt;&lt;</qualifiedname>
         <param>
@@ -69,128 +107,98 @@
           <declname>os</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">lrgst_expo</ref> &gt;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
           <declname>func</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator function to display function object in a human readable format </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="172" column="8" bodyfile="Exponential/Exponential.h" bodystart="172" bodyend="215"/>
+        <location file="Exponential/Exponential.h" line="188" column="8" bodyfile="Exponential/Exponential.h" bodystart="294" bodyend="346"/>
       </memberdef>
-      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a08885f8e67d9d34770121c63c16f2eea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-            <declname>e1</declname>
-            <defname>e1</defname>
-          </param>
-          <param>
-            <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-            <declname>e2</declname>
-            <defname>e2</defname>
-          </param>
-          <param>
-            <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-            <declname>r</declname>
-            <defname>r</defname>
-          </param>
-        </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">r</ref> &gt;</type>
-        <definition>Function&lt; r &gt; operator+</definition>
-        <argsstring>(const Function&lt; e1 &gt; &amp;f1, const Function&lt; e2 &gt; &amp;f2)</argsstring>
+      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac67d5be3dac9ab01eca47b11aaadb786" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function operator+</definition>
+        <argsstring>(const Function &amp;f1, const Function &amp;f2)</argsstring>
         <name>operator+</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator+</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e1</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f1</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e2</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f2</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator to add two functions </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="218" column="17" bodyfile="Exponential/Exponential.h" bodystart="301" bodyend="330"/>
+        <location file="Exponential/Exponential.h" line="190" column="17" bodyfile="Exponential/Exponential.h" bodystart="349" bodyend="394"/>
       </memberdef>
-      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1afde1d3a278a171c30ff0ff00f65d120e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-            <declname>e1</declname>
-            <defname>e1</defname>
-          </param>
-          <param>
-            <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-            <declname>e2</declname>
-            <defname>e2</defname>
-          </param>
-          <param>
-            <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref></type>
-            <declname>r</declname>
-            <defname>r</defname>
-          </param>
-        </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">r</ref> &gt;</type>
-        <definition>Function&lt; r &gt; operator-</definition>
-        <argsstring>(const Function&lt; e1 &gt; &amp;f1, const Function&lt; e2 &gt; &amp;f2)</argsstring>
+      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5e5034306a381d48ef50cce10f8f76c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function operator-</definition>
+        <argsstring>(const Function &amp;f1, const Function &amp;f2)</argsstring>
         <name>operator-</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator-</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e1</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f1</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">e2</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f2</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator to subtract two functions </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="220" column="17" bodyfile="Exponential/Exponential.h" bodystart="333" bodyend="366"/>
+        <location file="Exponential/Exponential.h" line="191" column="17" bodyfile="Exponential/Exponential.h" bodystart="397" bodyend="446"/>
       </memberdef>
-      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae95957956718c40093891faf8dd52b0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">lrgst_expo</ref> &gt;</type>
-        <definition>Function&lt; lrgst_expo &gt; operator*</definition>
-        <argsstring>(const Function&lt; lrgst_expo &gt; &amp;f, const int &amp;c)</argsstring>
+      <memberdef kind="friend" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5bb4eeaf7c3f6efe1c4eb1cd128d0d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function operator*</definition>
+        <argsstring>(const Function &amp;f, const int64_t &amp;c)</argsstring>
         <name>operator*</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator*</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">lrgst_expo</ref> &gt; &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>f</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref> &amp;</type>
+          <type>const int64_t &amp;</type>
           <declname>c</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator to multiply a function by a constant (Scaling it) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="223" column="17" bodyfile="Exponential/Exponential.h" bodystart="223" bodyend="233"/>
+        <location file="Exponential/Exponential.h" line="193" column="17" bodyfile="Exponential/Exponential.h" bodystart="449" bodyend="471"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a0585614da72409acfbed262411ea7882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a771e5f172d0738a6b56a3406ddea5779" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::Function</definition>
-        <argsstring>(const std::vector&lt; int &gt; &amp;constnts)</argsstring>
+        <definition>JRAMPERSAD::EXPONENTIAL::Function::Function</definition>
+        <argsstring>(const unsigned short &amp;Lrgst_expo)</argsstring>
         <name>Function</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::Function</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref> &gt; &amp;</type>
-          <declname>constnts</declname>
+          <type>const unsigned short &amp;</type>
+          <declname>Lrgst_expo</declname>
         </param>
         <briefdescription>
 <para>Constructor for <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> class. </para>
@@ -198,10 +206,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>constnts</parametername>
+<parametername>Lrgst_expo</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1 </para>
+<para>The largest exponent in the function (e.g 2 means largest exponent is x^2) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -209,108 +217,83 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="158" column="1" bodyfile="Exponential/Exponential.h" bodystart="369" bodyend="381"/>
+        <location file="Exponential/Exponential.h" line="160" column="1" bodyfile="Exponential/Exponential.h" bodystart="160" bodyend="165"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a7216329180e93c93204f4061be9e560b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1afc95333a173bc120f6f9519dae853b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
-        <definition>JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::Function</definition>
-        <argsstring>(std::vector&lt; int &gt; &amp;&amp;constnts)</argsstring>
-        <name>Function</name>
-        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::Function</qualifiedname>
-        <param>
-          <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref> &gt; &amp;&amp;</type>
-          <declname>constnts</declname>
-        </param>
-        <briefdescription>
-<para>Constructor for <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> class. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>constnts</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1 </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Exponential/Exponential.h" line="163" column="1" bodyfile="Exponential/Exponential.h" bodystart="384" bodyend="396"/>
-      </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a38038a3b3f371ca62098ad4d4c510966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::Function</definition>
-        <argsstring>(const Function &amp;other)=default</argsstring>
-        <name>Function</name>
-        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::Function</qualifiedname>
-        <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
-          <declname>other</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Exponential/Exponential.h" line="164" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1aaafd98fd5dc5d0f9e4503bed1d49d323" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type></type>
-        <definition>JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::Function</definition>
-        <argsstring>(Function &amp;&amp;other) noexcept=default</argsstring>
-        <name>Function</name>
-        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::Function</qualifiedname>
-        <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;&amp;</type>
-          <declname>other</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Exponential/Exponential.h" line="165" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a808783ae8be714fbbc5ddbd71db5ba30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type></type>
-        <definition>JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::~Function</definition>
+        <definition>JRAMPERSAD::EXPONENTIAL::Function::~Function</definition>
         <argsstring>()</argsstring>
         <name>~Function</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::~Function</qualifiedname>
         <briefdescription>
+<para>Destructor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="166" column="9" bodyfile="Exponential/Exponential.h" bodystart="399" bodyend="402"/>
+        <location file="Exponential/Exponential.h" line="167" column="9" bodyfile="Exponential/Exponential.h" bodystart="264" bodyend="267"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5c6ff5d442c8a74503312fb6bc75a1ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2d7ac0d79af16746f89309f758adf40c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JRAMPERSAD::EXPONENTIAL::Function::Function</definition>
+        <argsstring>(const Function &amp;other)=default</argsstring>
+        <name>Function</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::Function</qualifiedname>
+        <param>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Copy Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2f4cd78e5a95d1862b4389e81ef136da" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>JRAMPERSAD::EXPONENTIAL::Function::Function</definition>
+        <argsstring>(Function &amp;&amp;other) noexcept=default</argsstring>
+        <name>Function</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::Function</qualifiedname>
+        <param>
+          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Move Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a450305ad4a40a262d378b3781d87a043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
-        <definition>Function &amp; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::operator=</definition>
+        <definition>Function &amp; JRAMPERSAD::EXPONENTIAL::Function::operator=</definition>
         <argsstring>(const Function &amp;other)=default</argsstring>
         <name>operator=</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator=</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
+          <type>const <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
           <declname>other</declname>
         </param>
         <briefdescription>
+<para>Copy Assignment operator. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="168" column="10"/>
+        <location file="Exponential/Exponential.h" line="173" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac8934939c219d782fd1e02bca393318d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1af58e47ffa93dc7dd6b336327058731ff" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
-        <definition>Function &amp; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::operator=</definition>
+        <definition>Function &amp; JRAMPERSAD::EXPONENTIAL::Function::operator=</definition>
         <argsstring>(Function &amp;&amp;other) noexcept=default</argsstring>
         <name>operator=</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator=</qualifiedname>
@@ -319,62 +302,122 @@
           <declname>other</declname>
         </param>
         <briefdescription>
+<para>Move Assignment operator. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="169" column="10"/>
+        <location file="Exponential/Exponential.h" line="175" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a71628f495a8a26f9584487abf05293b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">lrgst_expo</ref> &gt; &amp;</type>
-        <definition>Function&lt; lrgst_expo &gt; &amp; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::operator*=</definition>
-        <argsstring>(const int &amp;c)</argsstring>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac27a8c4c7a6b39d087c8c20a63756cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JRAMPERSAD::EXPONENTIAL::Function::SetConstants</definition>
+        <argsstring>(const std::vector&lt; int64_t &gt; &amp;constnts)</argsstring>
+        <name>SetConstants</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::SetConstants</qualifiedname>
+        <param>
+          <type>const std::vector&lt; int64_t &gt; &amp;</type>
+          <declname>constnts</declname>
+        </param>
+        <briefdescription>
+<para>Sets the constants of the function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>constnts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="181" column="6" bodyfile="Exponential/Exponential.h" bodystart="269" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a6f92240916726bfa24fea0f846381060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JRAMPERSAD::EXPONENTIAL::Function::SetConstants</definition>
+        <argsstring>(std::vector&lt; int64_t &gt; &amp;&amp;constnts)</argsstring>
+        <name>SetConstants</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::SetConstants</qualifiedname>
+        <param>
+          <type>std::vector&lt; int64_t &gt; &amp;&amp;</type>
+          <declname>constnts</declname>
+        </param>
+        <briefdescription>
+<para>Sets the constants of the function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>constnts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the constants for the function (e.g 2, 1, 3 = 2x^2 + 1x - 3) size of array MUST be lrgst_expo + 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="186" column="6" bodyfile="Exponential/Exponential.h" bodystart="281" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a24f53f18a66c4911c9ec89f98b2f6781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> &amp;</type>
+        <definition>Function &amp; JRAMPERSAD::EXPONENTIAL::Function::operator*=</definition>
+        <argsstring>(const int64_t &amp;c)</argsstring>
         <name>operator*=</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::operator*=</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref> &amp;</type>
+          <type>const int64_t &amp;</type>
           <declname>c</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Operator to multiply a function by a constant (Scaling it) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="234" column="10" bodyfile="Exponential/Exponential.h" bodystart="234" bodyend="243"/>
+        <location file="Exponential/Exponential.h" line="194" column="10" bodyfile="Exponential/Exponential.h" bodystart="474" bodyend="492"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae43c705b427ac1ef27aed061a63e500e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">lrgst_expo</ref> - 1 &gt;</type>
-        <definition>Function&lt; lrgst_expo - 1 &gt; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::differential</definition>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1af05a7be6e85e4879185a84dc32cdf79c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref></type>
+        <definition>Function JRAMPERSAD::EXPONENTIAL::Function::differential</definition>
         <argsstring>() const</argsstring>
         <name>differential</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::differential</qualifiedname>
         <briefdescription>
-<para>Calculates the differential (dy/dx) of the function. </para>
+<para>Calculates the differential (dy/dx) of the <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>a function representing the differential (dy/dx) of the calling function object </para>
+<para><simplesect kind="return"><para>a <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> representing the differential (dy/dx) of the calling function object </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="250" column="10" bodyfile="Exponential/Exponential.h" bodystart="405" bodyend="417"/>
+        <location file="Exponential/Exponential.h" line="201" column="10" bodyfile="Exponential/Exponential.h" bodystart="494" bodyend="518"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ad090de9f6636094f14f1279615fccbc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref> &gt;</type>
-        <definition>std::vector&lt; double &gt; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::get_real_roots</definition>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2fe7e79ec57cb7160c783c20870fe855" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; JRAMPERSAD::EXPONENTIAL::Function::get_real_roots</definition>
         <argsstring>(const GA_Options &amp;options=GA_Options()) const</argsstring>
         <name>get_real_roots</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::get_real_roots</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kindref="compound">GA_Options</ref> &amp;</type>
+          <type>const <ref refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kindref="compound">GA_Options</ref> &amp;</type>
           <declname>options</declname>
           <defval><ref refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kindref="compound">GA_Options</ref>()</defval>
         </param>
         <briefdescription>
-<para><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> that uses a genetic algorithm to find the approximate roots of the function. </para>
+<para>Uses a genetic algorithm to find the approximate roots of the function. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -392,20 +435,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="257" column="14" bodyfile="Exponential/Exponential.h" bodystart="420" bodyend="496"/>
+        <location file="Exponential/Exponential.h" line="208" column="14" bodyfile="Exponential/Exponential.h" bodystart="520" bodyend="605"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5464547daff0c43faccdc40ea480bab4" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref></type>
-        <definition>double JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::solve_y</definition>
-        <argsstring>(const double &amp;x_val) const noexcept</argsstring>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a3df87946deead508714d3d6da50231ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double JRAMPERSAD::EXPONENTIAL::Function::solve_y</definition>
+        <argsstring>(const double &amp;x_val) const</argsstring>
         <name>solve_y</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::solve_y</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>x_val</declname>
         </param>
         <briefdescription>
-<para><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> that solves for y when x = user value. </para>
+<para>Solves for y when x = user value. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -423,25 +466,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="264" column="9" bodyfile="Exponential/Exponential.h" bodystart="499" bodyend="514"/>
+        <location file="Exponential/Exponential.h" line="215" column="9" bodyfile="Exponential/Exponential.h" bodystart="607" bodyend="624"/>
       </memberdef>
-      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a46b9671c4a29b2b2b34586048a3b795a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref> &gt;</type>
-        <definition>std::vector&lt; double &gt; JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;::solve_x</definition>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac6f66aef23d97a47707796a9891fda80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; JRAMPERSAD::EXPONENTIAL::Function::solve_x</definition>
         <argsstring>(const double &amp;y_val, const GA_Options &amp;options=GA_Options()) const</argsstring>
         <name>solve_x</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::solve_x</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>y_val</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kindref="compound">GA_Options</ref> &amp;</type>
+          <type>const <ref refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kindref="compound">GA_Options</ref> &amp;</type>
           <declname>options</declname>
           <defval><ref refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kindref="compound">GA_Options</ref>()</defval>
         </param>
         <briefdescription>
-<para><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> that uses a genetic algorithm to find the values of x where y = user value. </para>
+<para>Uses a genetic algorithm to find the values of x where y = user value. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -467,44 +510,56 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="272" column="14" bodyfile="Exponential/Exponential.h" bodystart="517" bodyend="592"/>
+        <location file="Exponential/Exponential.h" line="223" column="14" bodyfile="Exponential/Exponential.h" bodystart="626" bodyend="710"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8e355925ec8a283ad7a74a5c4832d4a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto JRAMPERSAD::EXPONENTIAL::Function::GetWhatIsTheLargestExponent</definition>
+        <argsstring>() const</argsstring>
+        <name>GetWhatIsTheLargestExponent</name>
+        <qualifiedname>JRAMPERSAD::EXPONENTIAL::Function::GetWhatIsTheLargestExponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>lrgst_expo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Exponential/Exponential.h" line="226" column="7" bodyfile="Exponential/Exponential.h" bodystart="226" bodyend="226"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>A class representing an Exponential <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> (e.g 2x^2 + 4x - 1),. </para>
+<para>class representing an Exponential <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">Function</ref> (e.g 2x^2 + 4x - 1) </para>
     </briefdescription>
     <detaileddescription>
-<para><parameterlist kind="templateparam"><parameteritem>
-<parameternamelist>
-<parametername>lrgst_expo</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The largest exponent in the function (e.g 2 means largest exponent is x^2) </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
     </detaileddescription>
-    <location file="Exponential/Exponential.h" line="144" column="1" bodyfile="Exponential/Exponential.h" bodystart="145" bodyend="273"/>
+    <location file="Exponential/Exponential.h" line="141" column="1" bodyfile="Exponential/Exponential.h" bodystart="142" bodyend="227"/>
     <listofallmembers>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a77a9d035d39b19c73c1c58d76aaa7820" prot="private" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>constants</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae43c705b427ac1ef27aed061a63e500e" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>differential</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a0585614da72409acfbed262411ea7882" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a7216329180e93c93204f4061be9e560b" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a38038a3b3f371ca62098ad4d4c510966" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1aaafd98fd5dc5d0f9e4503bed1d49d323" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ad090de9f6636094f14f1279615fccbc0" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>get_real_roots</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae95957956718c40093891faf8dd52b0e" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator*</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a71628f495a8a26f9584487abf05293b8" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator*=</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a08885f8e67d9d34770121c63c16f2eea" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator+</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1afde1d3a278a171c30ff0ff00f65d120e" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator-</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5de27194ad9a38f44771637a0f187562" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator&lt;&lt;</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5c6ff5d442c8a74503312fb6bc75a1ff" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator=</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac8934939c219d782fd1e02bca393318d" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator=</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8f5b8975b6e7318c093a963cd0b43db6" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>QuadraticSolve</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a46b9671c4a29b2b2b34586048a3b795a" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>solve_x</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5464547daff0c43faccdc40ea480bab4" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>solve_y</name></member>
-      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a808783ae8be714fbbc5ddbd71db5ba30" prot="public" virt="virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>~Function</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae2fc8499e47324a7ca65c20996119f1b" prot="private" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>bInitialized</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ab64518ac4650ef1a33ed80b285b0e7fc" prot="private" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>CanPerform</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8539119d87e133fc25fdd7c90c081e3e" prot="private" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>constants</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1af05a7be6e85e4879185a84dc32cdf79c" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>differential</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a771e5f172d0738a6b56a3406ddea5779" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2d7ac0d79af16746f89309f758adf40c" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2f4cd78e5a95d1862b4389e81ef136da" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>Function</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2fe7e79ec57cb7160c783c20870fe855" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>get_real_roots</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8e355925ec8a283ad7a74a5c4832d4a8" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>GetWhatIsTheLargestExponent</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a1918ec5f094574f4a43f51e3d4fd5016" prot="private" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>lrgst_expo</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5bb4eeaf7c3f6efe1c4eb1cd128d0d5e" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator*</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a24f53f18a66c4911c9ec89f98b2f6781" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator*=</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac67d5be3dac9ab01eca47b11aaadb786" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator+</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5e5034306a381d48ef50cce10f8f76c8" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator-</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a9715ead4f7565aea73b2b956d32a8c2e" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a450305ad4a40a262d378b3781d87a043" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator=</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1af58e47ffa93dc7dd6b336327058731ff" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>operator=</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a9d14c1b8a7401565a054837df5708ac8" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>QuadraticSolve</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac27a8c4c7a6b39d087c8c20a63756cb3" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>SetConstants</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a6f92240916726bfa24fea0f846381060" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>SetConstants</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac6f66aef23d97a47707796a9891fda80" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>solve_x</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a3df87946deead508714d3d6da50231ef" prot="public" virt="non-virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>solve_y</name></member>
+      <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1afc95333a173bc120f6f9519dae853b3a" prot="public" virt="virtual"><scope>JRAMPERSAD::EXPONENTIAL::Function</scope><name>~Function</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -9,13 +9,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref></type>
+        <type>T</type>
         <definition>T JRAMPERSAD::EXPONENTIAL::detail::ABS</definition>
         <argsstring>(const T &amp;n) noexcept</argsstring>
         <name>ABS</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::ABS</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &amp;</type>
+          <type>const T &amp;</type>
           <declname>n</declname>
         </param>
         <briefdescription>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="40" column="4" bodyfile="Exponential/Exponential.h" bodystart="40" bodyend="43"/>
+        <location file="Exponential/Exponential.h" line="39" column="4" bodyfile="Exponential/Exponential.h" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1ad8c0061f5d379beb5478b7a0b73325b4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -32,13 +32,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref></type>
+        <type>T</type>
         <definition>T JRAMPERSAD::EXPONENTIAL::detail::NEGATE</definition>
         <argsstring>(const T &amp;n) noexcept</argsstring>
         <name>NEGATE</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::NEGATE</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &amp;</type>
+          <type>const T &amp;</type>
           <declname>n</declname>
         </param>
         <briefdescription>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="46" column="4" bodyfile="Exponential/Exponential.h" bodystart="46" bodyend="49"/>
+        <location file="Exponential/Exponential.h" line="45" column="4" bodyfile="Exponential/Exponential.h" bodystart="45" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1a2bac2791c00b5a563a7bf60c422e9709" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -55,17 +55,17 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref></type>
+        <type>T</type>
         <definition>T JRAMPERSAD::EXPONENTIAL::detail::POW</definition>
         <argsstring>(const T &amp;n, const int &amp;exp) noexcept</argsstring>
         <name>POW</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::POW</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &amp;</type>
+          <type>const T &amp;</type>
           <declname>n</declname>
         </param>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">int</ref> &amp;</type>
+          <type>const int &amp;</type>
           <declname>exp</declname>
         </param>
         <briefdescription>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="52" column="4" bodyfile="Exponential/Exponential.h" bodystart="52" bodyend="64"/>
+        <location file="Exponential/Exponential.h" line="51" column="4" bodyfile="Exponential/Exponential.h" bodystart="51" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1a151665afe2284333a8407d99721a823d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -82,13 +82,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref></type>
+        <type>T</type>
         <definition>T JRAMPERSAD::EXPONENTIAL::detail::SUM</definition>
         <argsstring>(const std::vector&lt; T &gt; &amp;vec) noexcept</argsstring>
         <name>SUM</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::SUM</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &gt; &amp;</type>
+          <type>const std::vector&lt; T &gt; &amp;</type>
           <declname>vec</declname>
         </param>
         <briefdescription>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="67" column="4" bodyfile="Exponential/Exponential.h" bodystart="67" bodyend="73"/>
+        <location file="Exponential/Exponential.h" line="66" column="4" bodyfile="Exponential/Exponential.h" bodystart="66" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1a70f3fa407240a86fc80a12e0bfb161b1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -105,13 +105,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref></type>
+        <type>T</type>
         <definition>T JRAMPERSAD::EXPONENTIAL::detail::MEDIAN</definition>
         <argsstring>(std::vector&lt; T &gt; vec) noexcept</argsstring>
         <name>MEDIAN</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::MEDIAN</qualifiedname>
         <param>
-          <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &gt;</type>
+          <type>std::vector&lt; T &gt;</type>
           <declname>vec</declname>
         </param>
         <briefdescription>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="76" column="4" bodyfile="Exponential/Exponential.h" bodystart="76" bodyend="86"/>
+        <location file="Exponential/Exponential.h" line="75" column="4" bodyfile="Exponential/Exponential.h" bodystart="75" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1a8b5d80226dd572f405a738362a65d42a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -128,13 +128,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">double</ref></type>
+        <type>double</type>
         <definition>double JRAMPERSAD::EXPONENTIAL::detail::MEAN</definition>
         <argsstring>(const std::vector&lt; T &gt; &amp;vec) noexcept</argsstring>
         <name>MEAN</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::MEAN</qualifiedname>
         <param>
-          <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">const</ref> std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &gt; &amp;</type>
+          <type>const std::vector&lt; T &gt; &amp;</type>
           <declname>vec</declname>
         </param>
         <briefdescription>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="89" column="9" bodyfile="Exponential/Exponential.h" bodystart="89" bodyend="92"/>
+        <location file="Exponential/Exponential.h" line="88" column="9" bodyfile="Exponential/Exponential.h" bodystart="88" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1af8429cc7e6d21e47d3aabcf82fea1b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -151,13 +151,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">void</ref></type>
+        <type>void</type>
         <definition>void JRAMPERSAD::EXPONENTIAL::detail::SortASC</definition>
         <argsstring>(std::vector&lt; T &gt; &amp;vec)</argsstring>
         <name>SortASC</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::SortASC</qualifiedname>
         <param>
-          <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &gt; &amp;</type>
+          <type>std::vector&lt; T &gt; &amp;</type>
           <declname>vec</declname>
         </param>
         <briefdescription>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="95" column="7" bodyfile="Exponential/Exponential.h" bodystart="95" bodyend="103"/>
+        <location file="Exponential/Exponential.h" line="94" column="7" bodyfile="Exponential/Exponential.h" bodystart="94" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="_exponential_8h_1a4bce0c855a68d504f23c7c1cfd4314ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -174,13 +174,13 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">void</ref></type>
+        <type>void</type>
         <definition>void JRAMPERSAD::EXPONENTIAL::detail::SortDESC</definition>
         <argsstring>(std::vector&lt; T &gt; &amp;vec)</argsstring>
         <name>SortDESC</name>
         <qualifiedname>JRAMPERSAD::EXPONENTIAL::detail::SortDESC</qualifiedname>
         <param>
-          <type>std::vector&lt; <ref refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kindref="compound">T</ref> &gt; &amp;</type>
+          <type>std::vector&lt; T &gt; &amp;</type>
           <declname>vec</declname>
         </param>
         <briefdescription>
@@ -189,13 +189,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Exponential/Exponential.h" line="106" column="7" bodyfile="Exponential/Exponential.h" bodystart="106" bodyend="114"/>
+        <location file="Exponential/Exponential.h" line="105" column="7" bodyfile="Exponential/Exponential.h" bodystart="105" bodyend="113"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Exponential/Exponential.h" line="37" column="1"/>
+    <location file="Exponential/Exponential.h" line="36" column="1"/>
   </compounddef>
 </doxygen>

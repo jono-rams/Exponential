@@ -1,24 +1,29 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function" kind="class"><name>JRAMPERSAD::EXPONENTIAL::Function</name>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a77a9d035d39b19c73c1c58d76aaa7820" kind="variable"><name>constants</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8f5b8975b6e7318c093a963cd0b43db6" kind="friend"><name>QuadraticSolve</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5de27194ad9a38f44771637a0f187562" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a08885f8e67d9d34770121c63c16f2eea" kind="friend"><name>operator+</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1afde1d3a278a171c30ff0ff00f65d120e" kind="friend"><name>operator-</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae95957956718c40093891faf8dd52b0e" kind="friend"><name>operator*</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a0585614da72409acfbed262411ea7882" kind="function"><name>Function</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a7216329180e93c93204f4061be9e560b" kind="function"><name>Function</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a38038a3b3f371ca62098ad4d4c510966" kind="function"><name>Function</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1aaafd98fd5dc5d0f9e4503bed1d49d323" kind="function"><name>Function</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a808783ae8be714fbbc5ddbd71db5ba30" kind="function"><name>~Function</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5c6ff5d442c8a74503312fb6bc75a1ff" kind="function"><name>operator=</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac8934939c219d782fd1e02bca393318d" kind="function"><name>operator=</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a71628f495a8a26f9584487abf05293b8" kind="function"><name>operator*=</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae43c705b427ac1ef27aed061a63e500e" kind="function"><name>differential</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ad090de9f6636094f14f1279615fccbc0" kind="function"><name>get_real_roots</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5464547daff0c43faccdc40ea480bab4" kind="function"><name>solve_y</name></member>
-    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a46b9671c4a29b2b2b34586048a3b795a" kind="function"><name>solve_x</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a1918ec5f094574f4a43f51e3d4fd5016" kind="variable"><name>lrgst_expo</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8539119d87e133fc25fdd7c90c081e3e" kind="variable"><name>constants</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ae2fc8499e47324a7ca65c20996119f1b" kind="variable"><name>bInitialized</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ab64518ac4650ef1a33ed80b285b0e7fc" kind="function"><name>CanPerform</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a9d14c1b8a7401565a054837df5708ac8" kind="friend"><name>QuadraticSolve</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a9715ead4f7565aea73b2b956d32a8c2e" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac67d5be3dac9ab01eca47b11aaadb786" kind="friend"><name>operator+</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5e5034306a381d48ef50cce10f8f76c8" kind="friend"><name>operator-</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a5bb4eeaf7c3f6efe1c4eb1cd128d0d5e" kind="friend"><name>operator*</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a771e5f172d0738a6b56a3406ddea5779" kind="function"><name>Function</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1afc95333a173bc120f6f9519dae853b3a" kind="function"><name>~Function</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2d7ac0d79af16746f89309f758adf40c" kind="function"><name>Function</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2f4cd78e5a95d1862b4389e81ef136da" kind="function"><name>Function</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a450305ad4a40a262d378b3781d87a043" kind="function"><name>operator=</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1af58e47ffa93dc7dd6b336327058731ff" kind="function"><name>operator=</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac27a8c4c7a6b39d087c8c20a63756cb3" kind="function"><name>SetConstants</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a6f92240916726bfa24fea0f846381060" kind="function"><name>SetConstants</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a24f53f18a66c4911c9ec89f98b2f6781" kind="function"><name>operator*=</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1af05a7be6e85e4879185a84dc32cdf79c" kind="function"><name>differential</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a2fe7e79ec57cb7160c783c20870fe855" kind="function"><name>get_real_roots</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a3df87946deead508714d3d6da50231ef" kind="function"><name>solve_y</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1ac6f66aef23d97a47707796a9891fda80" kind="function"><name>solve_x</name></member>
+    <member refid="class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function_1a8e355925ec8a283ad7a74a5c4832d4a8" kind="function"><name>GetWhatIsTheLargestExponent</name></member>
   </compound>
   <compound refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options" kind="struct"><name>JRAMPERSAD::EXPONENTIAL::GA_Options</name>
     <member refid="struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a316979973a2a6b70b00520c2f753a43c" kind="variable"><name>min_range</name></member>
@@ -31,9 +36,11 @@
   <compound refid="namespace_j_r_a_m_p_e_r_s_a_d" kind="namespace"><name>JRAMPERSAD</name>
   </compound>
   <compound refid="namespace_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l" kind="namespace"><name>JRAMPERSAD::EXPONENTIAL</name>
-    <member refid="_exponential_8h_1a74ba0c80c30d2b4a2746dcafafbb6331" kind="function"><name>QuadraticSolve</name></member>
-    <member refid="_exponential_8h_1a949e2b83422e0ba69d947c8ae8b6b33e" kind="function"><name>operator+</name></member>
-    <member refid="_exponential_8h_1a9c05c4f210dac69008764b974749d9d6" kind="function"><name>operator-</name></member>
+    <member refid="_exponential_8h_1afbf8f9d0d82d0a543ba3f13fe888b3f0" kind="function"><name>QuadraticSolve</name></member>
+    <member refid="_exponential_8h_1acc43d98b40363eca4193d6a37120db7d" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="_exponential_8h_1aa6d1335b2f46ca5c209acbfbc72c6108" kind="function"><name>operator+</name></member>
+    <member refid="_exponential_8h_1afd853cdd6fe62dbc9ae6010a32d506ba" kind="function"><name>operator-</name></member>
+    <member refid="_exponential_8h_1a5d967a0e13882cc4f945cba48582eaea" kind="function"><name>operator*</name></member>
   </compound>
   <compound refid="namespace_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1detail" kind="namespace"><name>JRAMPERSAD::EXPONENTIAL::detail</name>
     <member refid="_exponential_8h_1a18e931aadf93c46a7d2a70240273b744" kind="function"><name>ABS</name></member>
@@ -47,12 +54,12 @@
   </compound>
   <compound refid="_exponential_8h" kind="file"><name>Exponential.h</name>
     <member refid="_exponential_8h_1aa9d24424a6f6e9452db8fba46dcdab18" kind="define"><name>JONATHAN_RAMPERSAD_EXPONENTIAL_H_</name></member>
+    <member refid="_exponential_8h_1abef9739b51a95af438efa8deea6f6eab" kind="define"><name>INITIALIZE_EXPO_FUNCTION</name></member>
   </compound>
   <compound refid="_source_8cpp" kind="file"><name>Source.cpp</name>
-    <member refid="_source_8cpp_1a58886021157a65d2d4b9c3f486ea5c2c" kind="typedef"><name>Function</name></member>
     <member refid="_source_8cpp_1abdf3aa0505635f2b960799972f78977d" kind="typedef"><name>timer</name></member>
-    <member refid="_source_8cpp_1aaffba5622da3efcab3ef60638c23cd52" kind="function"><name>CalcRoots</name></member>
-    <member refid="_source_8cpp_1aea271c738ee176b86ab545bac23336f6" kind="function"><name>SolveX</name></member>
+    <member refid="_source_8cpp_1a31ce7c6b21345b4a0a49384fa59b77cb" kind="function"><name>CalcRoots</name></member>
+    <member refid="_source_8cpp_1a4219e97cb99d992b2cdb7274a17b9436" kind="function"><name>SolveX</name></member>
     <member refid="_source_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="dir_47b71af010aaa4c53cfa8d8f5b85c863" kind="dir"><name>Exponential</name>

@@ -13,27 +13,27 @@
 <simplesect>
     <title>Public Attributes    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a316979973a2a6b70b00520c2f753a43c"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <emphasis role="strong">min_range</emphasis> = -100</para>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a316979973a2a6b70b00520c2f753a43c"/>double <emphasis role="strong">min_range</emphasis> = -100</para>
 
 <para>Minimum value you believe the answer can be. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a9b8f1e5367f6b0d8b16eecaea53b40e2"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <emphasis role="strong">max_range</emphasis> = 100</para>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a9b8f1e5367f6b0d8b16eecaea53b40e2"/>double <emphasis role="strong">max_range</emphasis> = 100</para>
 
 <para>Maximum value you believe the answer can be. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a4a67bad303f8a4fca40020a0802524c5"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">unsigned</link> <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">int</link> <emphasis role="strong">num_of_generations</emphasis> = 10</para>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a4a67bad303f8a4fca40020a0802524c5"/>unsigned int <emphasis role="strong">num_of_generations</emphasis> = 10</para>
 
 <para>Number of times you&apos;d like to run the algorithm (increasing this value causes the algorithm to take longer) </para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1ad133af29dbbc26b8c3d507d359c03326"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">unsigned</link> <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">int</link> <emphasis role="strong">sample_size</emphasis> = 1000</para>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1ad133af29dbbc26b8c3d507d359c03326"/>unsigned int <emphasis role="strong">sample_size</emphasis> = 1000</para>
 
 <para>Amount of approximate solutions you&apos;d like to be returned. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a6ec95fe6cc95dc32727659cf5bb1be12"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">unsigned</link> <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">int</link> <emphasis role="strong">data_size</emphasis> = 100000</para>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a6ec95fe6cc95dc32727659cf5bb1be12"/>unsigned int <emphasis role="strong">data_size</emphasis> = 100000</para>
 
 <para>Amount of solutions you&apos;d like the algorithm to generate (increasing this value causes the algorithm to take longer) </para>
 </listitem>
-            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a736488b3cfeebda7b93b3e8c6f576bf8"/><link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">double</link> <emphasis role="strong">mutation_percentage</emphasis> = 0.01</para>
+            <listitem><para><anchor xml:id="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options_1a736488b3cfeebda7b93b3e8c6f576bf8"/>double <emphasis role="strong">mutation_percentage</emphasis> = 0.01</para>
 
 <para>How much you&apos;d like the algorithm to mutate solutions (Leave this as default in most cases) </para>
 </listitem>

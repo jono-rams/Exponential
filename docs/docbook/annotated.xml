@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
 <title>Class List</title>
-Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">JRAMPERSAD::EXPONENTIAL::Function&lt; lrgst_expo &gt;</link>
-<para>A class representing an Exponential <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">Function</link> (e.g 2x^2 + 4x - 1), </para>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">JRAMPERSAD::EXPONENTIAL::Function</link>
+<para>Class representing an Exponential <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">Function</link> (e.g 2x^2 + 4x - 1) </para>
 <link linkend="_struct_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_g_a___options">JRAMPERSAD::EXPONENTIAL::GA_Options</link>
 <para>Structure for options to be used when running one of the two genetic algorithms in a <link linkend="_class_j_r_a_m_p_e_r_s_a_d_1_1_e_x_p_o_n_e_n_t_i_a_l_1_1_function">Function</link> object </para>
 </section>
