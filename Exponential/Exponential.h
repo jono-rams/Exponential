@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <execution>
 #include <exception>
+#include <type_traits>
 
 namespace JRAMPERSAD
 {
@@ -38,18 +39,21 @@ namespace JRAMPERSAD
 			template<typename T>
 			[[nodiscard("MATH::ABS(T) returns a value of type T")]] T ABS(const T& n) noexcept
 			{
+				static_assert(std::is_integral<T>::value, "Integral required.");
 				return n < 0 ? n * -1 : n;
 			}
 
 			template<typename T>
 			[[nodiscard("MATH::NEGATE(T) returns a value of type T")]] T NEGATE(const T& n) noexcept
 			{
+				static_assert(std::is_integral<T>::value, "Integral required.");
 				return n * -1;
 			}
 
 			template<typename T>
 			[[nodiscard("MATH::POW(T, int) returns a value of type T")]] T POW(const T& n, const int& exp) noexcept
 			{
+				static_assert(std::is_integral<T>::value, "Integral required.");
 				if (exp == 0)
 					return 1;
 
@@ -60,56 +64,6 @@ namespace JRAMPERSAD
 				}
 
 				return res;
-			}
-
-			template<typename T>
-			[[nodiscard("MATH::SUM(std::vector<T>) returns a value of type T")]] T SUM(const std::vector<T>& vec) noexcept
-			{
-				T res{};
-				for (auto& val : vec)
-					res += val;
-				return res;
-			}
-
-			template<typename T>
-			[[nodiscard]] T MEDIAN(std::vector<T> vec) noexcept
-			{
-				std::sort(
-					vec.begin(),
-					vec.end(),
-					[](const auto& lhs, const auto& rhs) {
-						return lhs < rhs;
-					});
-
-				return vec[vec.size() / 2];
-			}
-
-			template<typename T>
-			[[nodiscard]] double MEAN(const std::vector<T>& vec) noexcept
-			{
-				return SUM(vec) / vec.size();
-			}
-
-			template<typename T>
-			[[noreturn]] void SortASC(std::vector<T>& vec)
-			{
-				std::sort(
-					std::execution::par,
-					vec.begin(), vec.end(),
-					[](const auto& lhs, const auto& rhs) {
-						return lhs < rhs;
-					});
-			}
-
-			template<typename T>
-			[[noreturn]] void SortDESC(std::vector<T>& vec)
-			{
-				std::sort(
-					std::execution::par,
-					vec.begin(), vec.end(),
-					[](const auto& lhs, const auto& rhs) {
-						return lhs > rhs;
-					});
 			}
 
 			// Genetic Algorithm helper struct
@@ -146,7 +100,7 @@ namespace JRAMPERSAD
 
 			bool bInitialized;
 
-			void CanPerform() const { if (!bInitialized) throw std::logic_error("Function object not initialized fully! Please call .SetConstants() to initialize"); }
+			inline void CanPerform() const { if (!bInitialized) throw std::logic_error("Function object not initialized fully! Please call .SetConstants() to initialize"); }
 
 		public:
 			// Speicialty function to get the real roots of a Quadratic Function without relying on a Genetic Algorithm to approximate
