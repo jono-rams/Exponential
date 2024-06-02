@@ -39,21 +39,21 @@ namespace JRAMPERSAD
 			template<typename T>
 			[[nodiscard("MATH::ABS(T) returns a value of type T")]] T ABS(const T& n) noexcept
 			{
-				static_assert(std::is_integral<T>::value, "Integral required.");
+				static_assert(std::is_arithmetic<T>::value, "Arithmetic type required.");
 				return n < 0 ? n * -1 : n;
 			}
 
 			template<typename T>
 			[[nodiscard("MATH::NEGATE(T) returns a value of type T")]] T NEGATE(const T& n) noexcept
 			{
-				static_assert(std::is_integral<T>::value, "Integral required.");
+				static_assert(std::is_arithmetic<T>::value, "Arithmetic type required.");
 				return n * -1;
 			}
 
 			template<typename T>
 			[[nodiscard("MATH::POW(T, int) returns a value of type T")]] T POW(const T& n, const int& exp) noexcept
 			{
-				static_assert(std::is_integral<T>::value, "Integral required.");
+				static_assert(std::is_arithmetic<T>::value, "Arithmetic type required.");
 				if (exp == 0)
 					return 1;
 
