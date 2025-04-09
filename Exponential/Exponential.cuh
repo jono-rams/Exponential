@@ -11,6 +11,33 @@
 #include <exception>
 #include <type_traits>
 
+#ifdef USE_CUDA_ACCELERATION
+#include <cmath>
+#include <cfloat>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+#include <thrust/host_vector.h>
+#include <thrust/device_vector.h>
+#include <thrust/sort.h>
+#include <thrust/reverse.h>
+#include <thrust/execution_policy.h>
+
+__global__ void Fitness(int lrgst_expo, int64_t* constants, int sizeOfCons, double* x_vals, double* ranks, int sizeOfSols, double y_val)
+{
+	int idx = threadIdx.x + blockIdx.x * blockDim.x;
+	if (idx < sizeOfSols)
+	{
+		double ans = 0;
+		for (int i = lrgst_expo; i >= 0; i--)
+			ans += constants[i] * pow(x_vals[idx], (lrgst_expo - i));
+
+		ans -= y_val;
+		ranks[idx] = (ans == 0) ? DBL_MAX : fabs(1 / ans);
+	}
+}
+#endif
+
 namespace JRAMPERSAD
 {
 	namespace EXPONENTIAL
@@ -66,6 +93,8 @@ namespace JRAMPERSAD
 				return res;
 			}
 
+
+#ifndef USE_CUDA_ACCELERATION
 			// Genetic Algorithm helper struct
 			struct GA_Solution
 			{
@@ -86,6 +115,7 @@ namespace JRAMPERSAD
 					rank = (ans == 0) ? DBL_MAX : ABS(1 / ans);
 				}
 			};
+#endif
 		}
 
 		using namespace detail;
@@ -114,8 +144,8 @@ namespace JRAMPERSAD
 			Function(const unsigned short& Lrgst_expo) : lrgst_expo(Lrgst_expo), bInitialized(false)
 			{
 				if (lrgst_expo < 0)
-					throw std::logic_error("Function template argument must not be less than 0"); 
-				constants.reserve(Lrgst_expo); 
+					throw std::logic_error("Function template argument must not be less than 0");
+				constants.reserve(Lrgst_expo);
 			}
 			/** \brief Destructor */
 			virtual ~Function();
@@ -140,7 +170,7 @@ namespace JRAMPERSAD
 			void SetConstants(std::vector<int64_t>&& constnts);
 
 			friend std::ostream& operator<<(std::ostream& os, const Function func);
-		
+
 			friend Function operator+(const Function& f1, const Function& f2);
 			friend Function operator-(const Function& f1, const Function& f2);
 
@@ -214,7 +244,7 @@ namespace JRAMPERSAD
 			res.push_back(((NEGATE(b) - sqrt(sqr_val)) / 2 * a));
 			return res;
 		}
-	
+
 		Function::~Function()
 		{
 			constants.clear();
@@ -346,7 +376,7 @@ namespace JRAMPERSAD
 			f.SetConstants(res);
 			return f;
 		}
-	
+
 		/** Operator to subtract two functions */
 		Function operator-(const Function& f1, const Function& f2)
 		{
@@ -444,7 +474,7 @@ namespace JRAMPERSAD
 
 			return *this;
 		}
-		
+
 		Function Function::differential() const
 		{
 			try
@@ -504,6 +534,7 @@ namespace JRAMPERSAD
 			return ans;
 		}
 
+#ifndef USE_CUDA_ACCELERATION
 		inline std::vector<double> Function::solve_x(const double& y_val, const GA_Options& options) const
 		{
 			try
@@ -522,12 +553,12 @@ namespace JRAMPERSAD
 
 			solutions.resize(options.data_size);
 			for (unsigned int i = 0; i < options.sample_size; i++)
-				solutions[i] = (GA_Solution{lrgst_expo, 0, unif(device), y_val});
+				solutions[i] = (GA_Solution{ lrgst_expo, 0, unif(device), y_val });
 
 			for (unsigned int count = 0; count < options.num_of_generations; count++)
 			{
 				std::generate(std::execution::par, solutions.begin() + options.sample_size, solutions.end(), [this, &unif, &device, &y_val]() {
-					return GA_Solution{lrgst_expo, 0, unif(device), y_val};
+					return GA_Solution{ lrgst_expo, 0, unif(device), y_val };
 					});
 
 
@@ -589,6 +620,67 @@ namespace JRAMPERSAD
 			}
 			return ans;
 		}
+#else
+		std::vector<double> Function::solve_x(const double& y_val, const GA_Options& options) const
+		{
+			// Create initial random solutions
+			std::random_device device;
+			std::uniform_real_distribution<double> unif(options.min_range, options.max_range);
+
+			int64_t* cons = new int64_t[constants.size()];
+			int64_t* d_cons;
+			for (int i = 0; i < constants.size(); i++)
+				cons[i] = constants[i];
+
+			cudaMalloc(&d_cons, sizeof(int64_t) * constants.size());
+			cudaMemcpy(d_cons, cons, sizeof(int64_t) * constants.size(), cudaMemcpyHostToDevice);
+
+			thrust::host_vector<double> xVals(options.data_size);
+			thrust::device_vector<double> d_xVals(options.data_size);
+			thrust::device_vector<double> d_ranks(options.data_size);
+
+
+			for (unsigned int i = 0; i < options.sample_size; i++)
+			{
+				xVals[i] = unif(device);
+			}
+
+			for (unsigned int count = 0; count < options.num_of_generations; count++)
+			{
+				for (unsigned int i = options.sample_size; i < options.data_size; i++)
+				{
+					xVals[i] = unif(device);
+				}
+
+				d_xVals = xVals;
+				Fitness << <(options.data_size / 8192) + 1, 512 >> > (lrgst_expo, d_cons, (int)(constants.size()), d_xVals, d_ranks, options.data_size, y_val);
+				thrust::sort_by_key(thrust::device, d_ranks.begin(), d_ranks.end(), d_xVals.begin());
+				thrust::reverse(d_xVals.begin(), d_xVals.end());
+				xVals = d_xVals;
+
+				if (count + 1 == options.num_of_generations)
+				{
+					break;
+				}
+
+				std::uniform_real_distribution<double> m((1 - options.mutation_percentage), (1 + options.mutation_percentage));
+				auto x_begin = &xVals[0];
+				auto x_end = &xVals[options.sample_size - 1];
+				std::for_each(x_begin, x_end, [&m, &device](auto& v) {
+					v *= m(device);
+					});
+			}
+
+			std::vector<double> ans;
+			for (unsigned int i = 0; i < options.sample_size; i++)
+				ans.push_back(xVals[i]);
+
+			delete[] cons;
+			cudaFree(d_cons);
+
+			return ans;
+		}
+#endif
 	}
 }
 
